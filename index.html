@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>Fusión Restaurant · Menú Interactivo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar flotante -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="nav-btn active" data-category="nosotros">🇵🇪 Nosotros</button>
+            <button class="nav-btn" data-category="entradas">🥑 Entradas</button>
+            <button class="nav-btn" data-category="principales">🍛 Principales</button>
+            <button class="nav-btn" data-category="postres">🍰 Postres</button>
+            <button class="nav-btn" data-category="bebidas">🥤 Bebidas</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Título dinámico -->
+        <h1 class="section-title"><span id="dynamic-title">Nuestro Espacio</span></h1>
+        
+        <!-- Aquí se inyectará el contenido -->
+        <div id="content-area"></div>
+    </main>
+
+    <!-- Modal / Lightbox (oculto por defecto) -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">×</button>
+            <img src="" alt="" class="modal-img" id="modalImage">
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="modal-price" id="modalPrice"></span>
+                <p class="modal-desc" id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>🍽️ Fusión Restaurant · Sabores que conectan culturas · 2026</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/menu-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
